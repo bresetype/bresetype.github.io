@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'MonoBlock';
+    src: url('fonts/MonoBlock-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MonoBlock', sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 24;
+    padding: 0;
+}
