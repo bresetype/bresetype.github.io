@@ -18,21 +18,27 @@ body {
   line-height: 1.3;
   color: #000000;
   background-color: #f9f9f9;
-  margin: 0;
-  padding: 0 0 0 100px; /* Shorthand for padding */
-  width: 40vw;
+  margin: 0 auto; /* Center body content horizontally */
+  padding: 0 0 0 100px;
+  width: 45vw;
+  max-width: 768px; /* Default for larger screens */
+  text-align: left;
+  margin-left: auto; /* Aligns to the left edge */
+  margin-right: auto; /* Centers the content horizontally without forcing centering */
 }
 
 header h1 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
   font-size: 48px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .typeface-links header h2, main h2 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.2;
+  text-align: left;
   color: #000000;
   margin: 0; /* Removes extra space above and below h2 */
   padding: 0; /* Removes inner padding */
@@ -54,9 +60,25 @@ strong {
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 1.5s ease-in-out;
+  transition: color 1.4s ease-in-out;
 }
 
 a:hover {
   color: #098ba8; /* Example hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    width: 85vw; /* Increase width for smaller screens */
+    padding: 12px; /* Adjust padding for mobile devices */
+    text-align: left; /* Maintain left alignment */
+    margin-left: auto; /* Aligns to the left edge */
+    margin-right: auto; /* Centers the content horizontally without forcing centering */
+  }
+  
+  header h1 {
+    font-size: 36px; /* Reduce header size for smaller screens */
+    text-align: left;
+  }
 }
