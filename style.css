@@ -1,16 +1,56 @@
 @font-face {
-    font-family: 'MonoBlock';
-    src: url('fonts/MonoBlock-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'MonoBlock';
+  src: url('fonts/MonoBlock-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quince AI';
+  src: url('fonts/QuinceAI-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: 'MonoBlock', sans-serif;
-    font-size: 24px;
-    line-height: 1.4;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 24;
-    padding: 0;
+  font-family: 'Quince AI', 'Times New Roman', Times, serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 24px;
+  padding: 5px 45px 0 100px; /* Shorthand for padding */
+  width: 40vw;
+}
+
+header h1 {
+  font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.typeface-links header h2, main h2 {
+  font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0; /* Removes extra space above and below h2 */
+  padding: 0; /* Removes inner padding */
+}
+
+/* Apply oldstyle figures */
+.onum {
+  font-feature-settings: 'onum' 1;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 1.5s ease-in-out;
+}
+
+a:hover {
+  color: #098ba8; /* Example hover color */
 }
