@@ -20,8 +20,8 @@ body {
   background-color: #f9f9f9;
   margin: 0 auto; /* Center body content horizontally */
   padding: 0 0 0 100px;
-  width: 45vw;
-  max-width: 768px; /* Default for larger screens */
+  width: 60vw;
+  max-width: 1080px; /* Default for larger screens */
   text-align: left;
   margin-left: auto; /* Aligns to the left edge */
   margin-right: auto; /* Centers the content horizontally without forcing centering */
@@ -159,7 +159,6 @@ audio {
   font-size: 14px; /* Adjust the font size */
   color: #000; /* Text color for player labels */
   background-color: #f9f9f9; /* Background color of the player */
-  border: 1px solid #000000; /* Optional border for styling */
   padding: 0; /* Space inside the player container */
   outline: none; /* Remove default focus outline */
 }
@@ -177,16 +176,16 @@ audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-pause-button,
 audio::-webkit-media-controls-mute-button {
   color: #fff; /* Button text color */
-  border-radius: 50%; /* Circular buttons */
+  border-radius: 30%; /* Circular buttons */
   padding: 5px;
 }
 
 audio::-webkit-media-controls-timeline {
-  height: 5px; /* Timeline height */
+  height: 2px; /* Timeline height */
   border-radius: 0;
 }
 
 /* Hide the playback speed control button */
 audio::-webkit-media-controls-playback-rate {
-  display: none !important;
+    display: none !important;
 }
