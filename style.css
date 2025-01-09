@@ -12,6 +12,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BPMMono';
+  src: url('fonts/BPMMono_Web_Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Flock';
+  src: url('fonts/Flock-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Netrin';
+  src: url('fonts/Netrin-UltracondensedBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Quince AI', 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -36,7 +57,7 @@ header h1 {
 
 .typeface-links header h2, main h2 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   text-align: left;
   color: #000000;
@@ -60,7 +81,7 @@ strong {
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 1.4s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -112,7 +133,7 @@ a:hover {
   border-width: thin 1px;
   text-decoration: none;
   padding: 8px 8px 4px 8px;
-  transition: color 1.4s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .work-button:hover {
@@ -145,28 +166,104 @@ a:hover {
   border-width: thin 1px;
   text-decoration: none;
   padding: 8px 8px 4px 8px;
-  transition: color 1.4s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .about-button:hover {
   color: #076e88;
 }
 
+ /* Editable Container */
+.editable-container {
+  display: flex;
+  flex-direction: column;
+  resize: flex;
+  gap: 10px;
+}
+
+.editable-box {
+  height: scrollHeight;
+  min-height: 120px;
+  line-height: 1.2;
+  overflow-y: auto;
+  width: 100%;
+  direction: ltr;
+  text-align: left;
+  font-family: 'Quince AI', sans-serif; /* Default font */
+  font-size: 48px; /* Default font size */
+  resize: flex;
+  outline: none;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.font-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.slider {
+  -webkit-appearance: none; /* Removes default styling on Webkit browsers */
+  -moz-appearance: none;
+  width: 150px;
+  height: 1px;
+  background: #000000; /* Background track color */
+  accent-color: #000000;
+  border-radius: 3px; /* Smooth edges */
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none; /* Removes default styling on Webkit browsers */
+-moz-appearance: none;
+width: 10px;
+height: 10px;
+background: #000000; /* Background track color */
+accent-color: #000000;
+cursor: pointer;
+}
+
+.font-button {
+  display: inline-block;
+  font-family: 'MonoBlock', sans-serif;
+  font-size: 18px;
+  color: inherit;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-style: solid;
+  border-width: thin 1px;
+  text-decoration: none;
+  padding: 8px 8px 4px 8px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.font-button:hover {
+  color: #076e88;
+}
+
+ /* Audio Player */
 audio {
   width: 100%; /* Ensures the player is responsive */
   max-width: 300px; /* Set a maximum width */
-  font-family: 'MonoBlock', Arial, sans-serif; /* Your desired font */
+  font-family: 'MonoBlock'; /* Your desired font */
   font-size: 14px; /* Adjust the font size */
   color: #000; /* Text color for player labels */
   background-color: #f9f9f9; /* Background color of the player */
-  padding: 0; /* Space inside the player container */
   outline: none; /* Remove default focus outline */
 }
 
 /* Style audio player buttons */
 audio::-webkit-media-controls-panel {
   background-color: #f9f9f9; /* Background for the controls */
-  font-family: 'MonoBlock', Arial, sans-serif; /* Custom font */
+  font-family: 'MonoBlock'; /* Custom font */
   font-size: 14px; /* Control font size */
   color: #000; /* Control text color */
   border-radius: 0; /* Optional rounded corners */
@@ -177,15 +274,16 @@ audio::-webkit-media-controls-pause-button,
 audio::-webkit-media-controls-mute-button {
   color: #fff; /* Button text color */
   border-radius: 30%; /* Circular buttons */
-  padding: 5px;
 }
 
 audio::-webkit-media-controls-timeline {
   height: 2px; /* Timeline height */
   border-radius: 0;
+  font-family: 'MonoBlock'; /* Your desired font */
 }
 
 /* Hide the playback speed control button */
 audio::-webkit-media-controls-playback-rate {
     display: none !important;
-}
+    font-family: 'MonoBlock'; /* Your desired font */
+  }

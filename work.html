@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Blattmann — Work</title>
+    <title>Font Tester</title>
     <link rel="icon" href="/icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,6 +15,67 @@
         </div>
     </header>
     <main>
+        <p style="color:#000000;font-size:16px;"class="onum">The following type concepts are works-in-progress, single-weight designs and are not currently available. 
+        </p>
+        </br>
+        <div class="editable-container">
+            <!-- Content Editable Box -->
+           <!-- Font Size Slider -->
+           <div class="slider-container">
+            <label for="size-slider"></label>
+            <input
+                type="range"
+                id="size-slider"
+                class="slider"
+                min="12"
+                max="100"
+                value="48"
+                step="1"
+            >
+        </div>
+        <!-- Font Buttons -->
+        <div class="font-buttons-container">
+            <button class="font-button" data-font="Quince AI">Quince</button>
+            <button class="font-button" data-font="MonoBlock">MonoBlock</button>
+            <button class="font-button" data-font="Netrin">Netrin</button>
+            <button class="font-button" data-font="Flock">Flock</button>
+            <button class="font-button" data-font="BPMMono">BPM Mono</button>
+        </div>
+            <div
+                id="editable-box"
+                class="editable-box"
+                contenteditable="true"
+            >
+                Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish.
+                <br>
+                KD6-3-7, let's begin. Ready? The alphabet of you. All from 4 symbols. I am only 2: 1 and 0.
+            </div>   
+        </div>
+    
+        <script>
+            const editableBox = document.querySelector('.editable-box');
+            const sizeSlider = document.getElementById('size-slider');
+            const fontSizeDisplay = document.getElementById('font-size-display');
+            const fontButtons = document.querySelectorAll('.font-button');
+    
+            // Update font size on slider change
+            sizeSlider.addEventListener('input', (e) => {
+                const newSize = `${e.target.value}px`;
+                editableBox.style.fontSize = newSize;
+                fontSizeDisplay.textContent = newSize;
+            });
+    
+            // Change font family on button click
+            fontButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const newFont = e.target.getAttribute('data-font');
+                    editableBox.style.fontFamily = `${newFont}, Arial, sans-serif`;
+                });
+            });
+        </script>
+
+<hr class="section-divider" />
+
         <p class="onum">From 2012 to 2024, I worked as a font developer and team manager at Dalton Maag, where I helped shape the visual language and type systems of some of the world’s most recognized brands, including Amazon, 
             <a href="https://www.daltonmaag.com/portfolio/custom-fonts/dhl-delivery.html" target="_blank">DHL</a>, Facebook, FedEx, HP, 
             <a href="https://www.nokia.com/" target="_blank">Nokia</a>, and Oracle. 
@@ -36,12 +97,14 @@
             <strong>MonoBlock</strong> 
             and Quince <br>
             © 2024 Alex Blattmann</p>
-        <!-- Simple Audio Player -->
+        </p>
+    <!-- Simple Audio Player -->
         <div class="audio-player">
             <audio controls>
                 <source src="audio/Fafa v1.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
+            <a href="https://open.spotify.com/artist/0pO1dfqnLstOOmUuxdo503?si=WI-k_jlcTluNUdCT5FDVqg" target="_blank" style="color:#000000;font-family:'MonoBlock';font-size:16px;vertical-align:middle;"class="onum"> Sound by Brese</a>
         </div>            
     </footer>
 </body>
