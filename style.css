@@ -55,7 +55,8 @@ header h1 {
   text-align: left;
 }
 
-.typeface-links header h2, main h2 {
+.typeface-links header h2,
+main h2 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.2;
@@ -97,7 +98,7 @@ a:hover {
     margin-left: auto; /* Aligns to the left edge */
     margin-right: auto; /* Centers the content horizontally without forcing centering */
   }
-  
+
   header h1 {
     font-size: 36px; /* Reduce header size for smaller screens */
     text-align: left;
@@ -173,7 +174,7 @@ a:hover {
   color: #076e88;
 }
 
- /* Editable Container */
+/* Editable Container */
 .editable-container {
   display: flex;
   flex-direction: column;
@@ -272,7 +273,7 @@ a:hover {
   color: #076e88;
 }
 
- /* Audio Player */
+/* Audio Player */
 audio {
   width: 100%; /* Ensures the player is responsive */
   max-width: 300px; /* Set a maximum width */
@@ -307,9 +308,9 @@ audio::-webkit-media-controls-timeline {
 
 /* Hide the playback speed control button */
 audio::-webkit-media-controls-playback-rate {
-    display: none !important;
-    font-family: 'MonoBlock'; /* Your desired font */
-  }
+  display: none !important;
+  font-family: 'MonoBlock'; /* Your desired font */
+}
 
 .floating-header {
   position: fixed;
