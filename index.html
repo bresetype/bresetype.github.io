@@ -7,18 +7,19 @@
     <link rel="icon" href="/icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="floating-header">
-  <a href="index.html" class="site-name">Alex Blattmann</a>
-  <img src="assets/menu32x32.svg" alt="Menu" class="hamburger-icon" onclick="toggleMenu()" />
-  <div class="hamburger-menu" id="menu">
-    <a href="#typefaces">Typefaces</a>
-    <a href="#about">About</a>
-  </div>
-</div>
 <body>
-    <header>
-        <h1>Hello!</h1>
-    </header>
+  <header>
+      <h1>Hello!</h1>
+  </header>
+  <div class="floating-header">
+    <a href="index.html" class="site-name">Alex Blattmann</a>
+    <img src="assets/menu32x32.svg" class="hamburger-icon" onclick="toggleMenu()">
+    <div class="hamburger-menu" id="menu">
+      <a href="typefaces.html">Typefaces</a>
+      <a href="index.html">About</a>
+    </div>
+  </div>
+
     <main>
         <p>I’m Alex – a Swiss type designer, font developer, and typographer.</p>
         <p>I’ve been working in the world of print, typography, and type design for over two decades. 
@@ -44,9 +45,9 @@
         </div>
         </p>
 
-        <!-- Work Section with Link to New Page -->
-        <div class="work-section">
-            <a href="work.html" class="work-button">View Work</a>
+        <!-- typefaces Section with Link to New Page -->
+        <div class="typefaces-section">
+            <a href="typefaces.html" class="typefaces-button">View Typefaces</a>
         </div>
 
         <div style="height: 20px;"></div>
@@ -84,11 +85,11 @@
         </div>
         <p> <a href="https://open.spotify.com/artist/0pO1dfqnLstOOmUuxdo503?si=WI-k_jlcTluNUdCT5FDVqg" target="_blank" style="color:#000000;font-family:'MonoBlock';font-size:16px;vertical-align:top;"class="onum"> Sound by Brese</a> </p>            
     </footer>
-    
-<script>
-  function toggleMenu() {
-    document.getElementById('menu').classList.toggle('show');
-  }
-</script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>

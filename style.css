@@ -50,7 +50,7 @@ body {
 
 header h1 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
-  font-size: 48px;
+  font-size: 20px;
   line-height: 1.2;
   text-align: left;
 }
@@ -104,26 +104,26 @@ a:hover {
   }
 }
 
-/* Work Section */
-.work-section {
+/* Typefaces Section */
+.typefaces-section {
   margin-bottom: 32px;
   text-align: center;
 }
 
-.work-section h2 {
+.typefaces-section h2 {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
   font-size: 24px;
   margin-bottom: 0 auto;
 }
 
-.work-section p {
+.typefaces-section p {
   font-size: 20px;
   line-height: 1.3;
   margin-bottom: 20px; /* Center body content horizontally */
 }
 
-/* Rounded Button for Work Page Link */
-.work-button {
+/* Rounded Button for typefaces Page Link */
+.typefaces-button {
   display: inline-block;
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -136,7 +136,7 @@ a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-.work-button:hover {
+.typefaces-button:hover {
   color: #076e88;
 }
 
@@ -214,27 +214,41 @@ a:hover {
 
 .slider {
   appearance: none;
-  -webkit-appearance: none; /* Removes default styling on Webkit browsers */
+  -webkit-appearance: none;
   -moz-appearance: none;
   width: 150px;
   height: 1px;
-  background: #000000; /* Background track color */
-  accent-color: #000000;
-  border-radius: 3px; /* Smooth edges */
+  background: #000000;
+  border-radius: 0;
   outline: none;
   cursor: pointer;
 }
 
+/* WebKit Browsers (Chrome, Safari) */
 .slider::-webkit-slider-thumb {
-  appearance: none;
-  -webkit-appearance: none; /* Removes default styling on Webkit browsers */
-  -moz-appearance: none;
+  -webkit-appearance: none;
   width: 10px;
   height: 10px;
-  background: #000000; /* Background track color */
-  accent-color: #000000;
+  background: #000000;
+  border: none;
   cursor: pointer;
-  appearance: none;
+}
+
+/* Firefox */
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  border: none;
+  border-radius: 0; /* This makes it square */
+  cursor: pointer;
+}
+
+/* Firefox track */
+.slider::-moz-range-track {
+  background: #000000;
+  height: 1px;
+  border: none;
 }
 
 .font-button {
@@ -299,14 +313,14 @@ audio::-webkit-media-controls-playback-rate {
 
 .floating-header {
   position: fixed;
-  top: 12px;
+  top: 11px;
   left: 16px;
   right: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'MonoBlock', monospace;
-  font-size: 24px;
+  font-size: 20px;
   z-index: 1000;
   background-color: transparent;
   color: #000;
@@ -345,5 +359,3 @@ audio::-webkit-media-controls-playback-rate {
 .hamburger-menu.show {
   display: flex;
 }
-
-
