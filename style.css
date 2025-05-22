@@ -184,7 +184,6 @@ a:hover {
 }
 
 .editable-box {
-  height: scrollHeight;
   min-height: 120px;
   line-height: 1.2;
   overflow-y: auto;
