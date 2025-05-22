@@ -7,7 +7,14 @@
     <link rel="icon" href="/icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="floating-name">Alex Blattmann</div>
+<div class="floating-header">
+  <a href="index.html" class="site-name">Alex Blattmann</a>
+  <img src="assets/menu32x32.svg" alt="Menu" class="hamburger-icon" onclick="toggleMenu()" />
+  <div class="hamburger-menu" id="menu">
+    <a href="#typefaces">Typefaces</a>
+    <a href="#about">About</a>
+  </div>
+</div>
 <body>
     <header>
         <h1>Hello!</h1>
@@ -77,5 +84,11 @@
         </div>
         <p> <a href="https://open.spotify.com/artist/0pO1dfqnLstOOmUuxdo503?si=WI-k_jlcTluNUdCT5FDVqg" target="_blank" style="color:#000000;font-family:'MonoBlock';font-size:16px;vertical-align:top;"class="onum"> Sound by Brese</a> </p>            
     </footer>
+    
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+  }
+</script>
 </body>
 </html>

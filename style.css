@@ -296,3 +296,54 @@ audio::-webkit-media-controls-playback-rate {
     display: none !important;
     font-family: 'MonoBlock'; /* Your desired font */
   }
+
+.floating-header {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'MonoBlock', monospace;
+  font-size: 24px;
+  z-index: 1000;
+  background-color: transparent;
+  color: #000;
+}
+
+.hamburger-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Hidden by default */
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  right: 16px;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  font-size: 16px;
+  flex-direction: column;
+  font-family: 'MonoBlock', monospace;
+}
+
+.hamburger-menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.hamburger-menu a:hover {
+  color: #076e88;
+}
+
+/* Toggle menu display with class */
+.hamburger-menu.show {
+  display: flex;
+}
+
+
