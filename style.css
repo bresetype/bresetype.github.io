@@ -227,13 +227,15 @@ a:hover {
 }
 
 .slider::-webkit-slider-thumb {
--webkit-appearance: none; /* Removes default styling on Webkit browsers */
--moz-appearance: none;
-width: 10px;
-height: 10px;
-background: #000000; /* Background track color */
-accent-color: #000000;
-cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none; /* Removes default styling on Webkit browsers */
+  -moz-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #000000; /* Background track color */
+  accent-color: #000000;
+  cursor: pointer;
+  appearance: none;
 }
 
 .font-button {
