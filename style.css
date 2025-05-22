@@ -191,7 +191,7 @@ a:hover {
   direction: ltr;
   text-align: center;
   font-family: 'Quince AI', sans-serif; /* Default font */
-  font-size: 48px; /* Default font size */
+  font-size: 72px; /* Default font size */
   resize: flex;
   outline: none;
 }
@@ -206,9 +206,9 @@ a:hover {
 .font-buttons-container {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 12px;
   margin-bottom: 10px;
-  text-align: center;
   flex-wrap: wrap;
 }
 
@@ -241,6 +241,7 @@ a:hover {
   display: inline-block;
   font-family: 'MonoBlock', sans-serif;
   font-size: 18px;
+  align-items: center;
   text-align: center;
   color: inherit;
   background-color: #ffffff;
