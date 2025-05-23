@@ -53,6 +53,7 @@ header h1 {
   font-size: 20px;
   line-height: 1.2;
   text-align: left;
+  margin-top: 100px;
 }
 
 .typeface-links header h2,
@@ -100,9 +101,15 @@ a:hover {
   }
 
   header h1 {
-    font-size: 36px; /* Reduce header size for smaller screens */
+    font-size: 20px; /* Reduce header size for smaller screens */
     text-align: left;
+    padding-top: 60px;
   }
+}
+
+.site-name {
+  background-color: #f9f9f9; /* or your desired color */
+  padding: 20px; /* optional: adds space around the text */
 }
 
 /* Typefaces Section */
@@ -317,14 +324,21 @@ audio::-webkit-media-controls-playback-rate {
   top: 11px;
   left: 16px;
   right: 16px;
+  font-size: 20px;
+  z-index: 1000;
+  color: #000;
+  background-color: #f9f9f9; /* or your color */
+  transition: transform 0.3s ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 16px;
   font-family: 'MonoBlock', monospace;
-  font-size: 20px;
-  z-index: 1000;
-  background-color: transparent;
-  color: #000;
+}
+
+/* Hidden state */
+.floating-header.hide {
+  transform: translateY(-100%);
 }
 
 .hamburger-icon {
