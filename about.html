@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Blattmann</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hello!</h1>
+  </header>
+
+  <div class="floating-header" id="floatingHeader">
+    <a href="index.html" class="site-name">Alex Blattmann</a>
+    <img src="assets/menu32x32.svg" class="hamburger-icon" onclick="toggleMenu()">
+    <div class="hamburger-menu" id="menu">
+      <a href="index.html">Typefaces</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <main>
+    <p>I’m Alex – a Swiss type designer, font developer, and typographer.</p>
+
+    <p>
+      I’ve been working in the world of print, typography, and type design for over two decades. 
+      <br>Along the way, I’ve developed a strong focus on type history and design education, sharing what I know through teaching and workshops at places like
+      <a href="https://ecal.ch/en/courses-and-research/master/type-design/" target="_blank">ECAL Master Type Design (CH)</a>, 
+      <a href="https://sfgz.ch/" target="_blank">SFGZ (CH)</a>, 
+      <a href="https://www.southampton.ac.uk/courses/graphic-communication-degree-ba" target="_blank">Winchester School of Art (UK)</a>. 
+      <br>Whether it’s beginners or advanced students, I love helping others explore the art and craft of type.
+    </p>
+
+    <p class="onum">
+      From 2012 to 2024, I was part of the team at Dalton Maag in London, working as a typeface designer, font developer, and team manager. I had the chance to help shape the visual identity of global brands like Amazon, 
+      <a href="https://www.daltonmaag.com/portfolio/custom-fonts/dhl-delivery.html" target="_blank">DHL</a>, Facebook, FedEx, HP, 
+      <a href="https://www.nokia.com/" target="_blank">Nokia</a>, and Oracle — designing custom, multi-script typefaces, refining logotypes and wordmarks, and creating fonts used by millions around the world.
+    </p>
+
+    <p>
+      Beyond design work, I also helped train new team members, built internal knowledge systems, and worked on improving how we develop fonts — making the whole process smoother and more efficient.
+    </p>
+
+    <div style="height: 20px;"></div>
+
+    <p>Published typefaces at Dalton Maag:</p>
+
+    <div class="typeface-links">
+      <h2><a href="https://www.daltonmaag.com/font-library/aktiv-grotesk.html" target="_blank">→ Aktiv Grotesk</a></h2>
+      <h2><a href="https://www.daltonmaag.com/font-library/bressay.html" target="_blank">→ Bressay Arabic</a></h2>
+    </div>
+
+    <div class="typefaces-section">
+      <a href="index.html" class="typefaces-button">View Typefaces</a>
+    </div>
+
+    <div style="height: 20px;"></div>
+    <hr class="section-divider" />
+
+    <p>
+      Say hello or follow along! <br />
+      I’m always open to collaboration and would love to hear from you – whether you’re interested in working together or just curious about my projects.
+    </p>
+
+    <div class="typeface-links">
+      <h2><a href="mailto:brese.iceberg@gmail.com">→ brese.iceberg[at]gmail.com</a></h2>
+      <h2><a href="https://www.linkedin.com/in/alex-blattmann-6b3428152/" target="_blank">→ LinkedIn</a></h2>
+      <h2><a href="https://www.instagram.com/__brese__/" target="_blank">→ Instagram [at]__brese__</a></h2>
+    </div>
+  </main>
+
+  <div style="height: 20px;"></div>
+  <hr class="section-divider" />
+
+  <footer>
+    <p style="color:#000000; font-size:16px;" class="onum">
+      This site uses <strong>MonoBlock</strong> and Quince <br>
+      © 2025 Alex Blattmann
+    </p>
+    <br>
+
+    <!-- Simple Audio Player -->
+    <div class="audio-player">
+      <audio controls>
+        <source src="audio/Fafa v1.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <p>
+      <a href="https://open.spotify.com/artist/0pO1dfqnLstOOmUuxdo503?si=WI-k_jlcTluNUdCT5FDVqg" target="_blank" style="color:#000000; font-family:'MonoBlock'; font-size:16px; vertical-align:top;" class="onum">
+        Sound by Brese
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
+  <script>
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById('floatingHeader');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        header.classList.add('hide');
+      } else {
+        // Scrolling up
+        header.classList.remove('hide');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>  
+</body>
+</html>
