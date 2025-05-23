@@ -37,18 +37,47 @@
     <div style="height: 60px;"></div>
 
     <div class="editable-container">
-      <div class="slider-container">
-        <input
-          type="range"
-          class="slider size-slider"
-          min="12"
-          max="144"
-          value="96"
-          step="1"
-        />
+      <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Font Size
+          <input
+            type="range"
+            class="slider size-slider"
+            min="12"
+            max="144"
+            value="96"
+            step="1"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Tracking
+          <input
+            type="range"
+            class="slider tracking-slider"
+            min="-0.05"
+            max="0.1"
+            step="0.01"
+            value="0"
+            style="width: 32px;"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Leading
+          <input
+            type="range"
+            class="slider lineheight-slider-vertical"
+            min="0.6"
+            max="1.6"
+            value="1"
+            step="0.01"
+          />
+        </label>
       </div>
-      <div class="editable-box" contenteditable="true">
-        The Master of Looking Busy
+      <div style="height: 10px;"></div>
+      <div class="editable-box editable-box-large" contenteditable="true">
+        The Art of Looking Busy 
       </div>
     </div>
 
@@ -56,36 +85,135 @@
     <div style="height: 60px;"></div>
 
     <div class="editable-container">
-      <div class="slider-container">
-        <input
-          type="range"
-          class="slider size-slider"
-          min="12"
-          max="144"
-          value="96"
-          step="1"
-        />
+      <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Font Size
+          <input
+            type="range"
+            class="slider size-slider"
+            min="12"
+            max="144"
+            value="48"
+            step="1"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Tracking
+          <input
+            type="range"
+            class="slider tracking-slider"
+            min="-0.05"
+            max="0.1"
+            step="0.01"
+            value="0"
+            style="width: 32px;"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Leading
+          <input
+            type="range"
+            class="slider lineheight-slider-vertical"
+            min="0.6"
+            max="1.6"
+            value="1"
+            step="0.01"
+          />
+        </label>
       </div>
-      <div class="editable-box" contenteditable="true">
-        Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. KD6-3-7, let’s begin. Ready? The alphabet of you. All from 4 symbols. I am only 2: 1 and 0.
+      <div style="height: 10px;"></div>
+      <div class="editable-box editable-box-medium" contenteditable="true">
+        Mere data make a man. A, and C, and T, and G. The alphabet of you. All from 4 symbols. Im only 2. 1 and 0. KD6-3-7, let’s begin. Ready? 
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script>
-      // Apply individual font size control
-      document.querySelectorAll('.editable-container').forEach(container => {
-        const slider = container.querySelector('.size-slider');
-        const box = container.querySelector('.editable-box');
-        slider.addEventListener('input', (e) => {
-          box.style.fontSize = `${e.target.value}px`;
-        });
-      });
+    <!-- Editable Box 3 -->
+    <div style="height: 60px;"></div>
 
-      // Apply shared font family control to all boxes
+    <div class="editable-container">
+      <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Font Size
+          <input
+            type="range"
+            class="slider size-slider"
+            min="12"
+            max="144"
+            value="16"
+            step="1"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Tracking
+          <input
+            type="range"
+            class="slider tracking-slider"
+            min="-0.05"
+            max="0.1"
+            step="0.01"
+            value="0"
+            style="width: 32px;"
+          />
+        </label>
+    
+        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+          Leading
+          <input
+            type="range"
+            class="slider lineheight-slider-vertical"
+            min="0.6"
+            max="1.6"
+            value="1"
+            step="0.01"
+          />
+        </label>
+      </div>
+      <div style="height: 10px;"></div>
+      <div class="editable-box editable-box-small" contenteditable="true">
+        Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. And yet it also pleases me and seems right that what is of value and wisdom to one man seems nonsense to another. (Hermann Hesse, Siddhartha)
+      </div>
+    </div>
+
+    <script>
+      // Apply individual font size and line-height control
+      document.querySelectorAll('.editable-container').forEach(container => {
+        const sizeSlider = container.querySelector('.size-slider');
+        const trackingSlider = container.querySelector('.tracking-slider');
+        const lineHeightSlider = container.querySelector('.lineheight-slider-vertical');
+        const box = container.querySelector('.editable-box');
+      
+        if (sizeSlider) {
+          sizeSlider.addEventListener('input', (e) => {
+            box.style.fontSize = `${e.target.value}px`;
+          });
+          // Set initial font size
+          box.style.fontSize = `${sizeSlider.value}px`;
+        }
+    
+        if (trackingSlider) {
+          trackingSlider.addEventListener('input', (e) => {
+            box.style.letterSpacing = `${e.target.value}em`;
+          });
+          // Set initial letter spacing
+          box.style.letterSpacing = `${trackingSlider.value}em`;
+        }
+    
+        if (lineHeightSlider) {
+          lineHeightSlider.addEventListener('input', (e) => {
+            box.style.lineHeight = e.target.value;
+          });
+          // Set initial line height
+          box.style.lineHeight = lineHeightSlider.value;
+        }
+      });
+      
+      // Font buttons apply font family to all editable boxes
       const fontButtons = document.querySelectorAll('.font-button');
       const allEditableBoxes = document.querySelectorAll('.editable-box');
-
+      
       fontButtons.forEach(button => {
         button.addEventListener('click', (e) => {
           const font = e.target.getAttribute('data-font');
@@ -95,7 +223,7 @@
         });
       });
     </script>
-
+    
     <div style="height: 40px;"></div>
     <hr class="section-divider" />
 
@@ -106,9 +234,9 @@
 
   <footer>
     <div style="height: 40px;"></div>
-    <p style="color:#000000; font-size:16px;" class="onum">
+    <p style="color:#000000; font-size:12px;" class="onum">
       This site uses <strong>MonoBlock</strong> and Quince <br />
-      © 2025 Alex Blattmann
+      © 2025
     </p>
   </footer>
 
@@ -131,6 +259,6 @@
       }
       lastScrollY = window.scrollY;
     });
-  </script>  
+  </script>    
 </body>
 </html>

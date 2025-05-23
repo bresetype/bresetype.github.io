@@ -69,7 +69,7 @@ main h2 {
 
 strong {
   font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -163,24 +163,6 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* About Button Styling */
-.about-button {
-  display: inline-block;
-  font-family: 'MonoBlock', Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #000000;
-  border-color: #000000;
-  border-style: solid;
-  border-width: thin 1px;
-  text-decoration: none;
-  padding: 8px 8px 4px 8px;
-  transition: color 0.3s ease-in-out;
-}
-
-.about-button:hover {
-  color: #076e88;
-}
-
 /* Editable Container */
 .editable-container {
   display: flex;
@@ -192,16 +174,29 @@ a:hover {
 }
 
 .editable-box {
-  min-height: 120px;
-  line-height: 1.2;
+  min-height: 140px;
+  line-height: 1;
   overflow-y: auto;
   width: 100%;
   direction: ltr;
   text-align: center;
   font-family: 'Quince AI', sans-serif; /* Default font */
-  font-size: 72px; /* Default font size */
+  font-size: 48px; /* Default font size */
   resize: flex;
   outline: none;
+  padding-top: 0.3em; /* vertical padding prevents clipping */
+  padding-bottom: 0.3em; /* vertical padding prevents clipping */
+  overflow-y: visible;
+}
+
+.editable-box-large {
+  font-size: 100px;
+}
+.editable-box-medium {
+  font-size: 48px;
+}
+.editable-box-small {
+  font-size: 16px;
 }
 
 .slider-container {
@@ -209,6 +204,7 @@ a:hover {
   align-items: center;
   text-align: center;
   margin-bottom: 10px;
+  gap: 20px;
 }
 
 .font-buttons-container {
@@ -224,29 +220,55 @@ a:hover {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 150px;
+  width: 80px;
   height: 1px;
-  background: #000000;
+  background: #c0c0c0;
   border-radius: 0;
   outline: none;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
+.slider-controls {
+  display: flex;
+  align-items: center;      /* Vertically center them */
+  gap: 2rem;              /* Optional: space between sliders */
+  flex-wrap: nowrap;        /* Prevent wrapping on small screens */
+}
+
+.slider-controls label {
+  display: flex;
+  align-items: center;
+  font-family: 'MonoBlock', monospace;
+  font-size: 14px;
+  gap: 6px;
+  color: #c0c0c0;
+  transition: color 0.2s ease;
+}
+
+.slider-controls label:hover {
+  color: #000000;
+}
+
+.slider,
+.lineheight-slider-vertical {
+  flex-shrink: 1.5;
+}
 /* WebKit Browsers (Chrome, Safari) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #000000;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
   border: none;
   cursor: pointer;
 }
 
 /* Firefox */
 .slider::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
-  background: #000000;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
   border: none;
   border-radius: 0; /* This makes it square */
   cursor: pointer;
@@ -254,10 +276,113 @@ a:hover {
 
 /* Firefox track */
 .slider::-moz-range-track {
-  background: #000000;
+  background: #c0c0c0;
   height: 1px;
   border: none;
 }
+
+.slider-spacer {
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.lineheight-slider-vertical {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 32px;      /* width becomes height visually */
+  height: 1px;      /* makes it flat */
+  transform: rotate(-90deg); /* rotate it to act vertically */
+  transform-origin: center;
+  background: #c0c0c0;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.lineheight-slider-vertical::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+.lineheight-slider-vertical::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+.lineheight-slider-vertical::-moz-range-track {
+  background: #c0c0c0;
+  width: 1px;
+  border: none;
+}
+
+.tracking-slider {
+  appearance: none;
+  height: 1px;
+  background: #c0c0c0;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tracking-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #c0c0c0;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Hover styling for all sliders === */
+
+/* Horizontal slider track on hover */
+.slider:hover {
+  background: #000000;
+}
+
+/* Vertical slider track on hover */
+.lineheight-slider-vertical:hover {
+  background: #000000;
+}
+
+/* Horizontal slider thumb on hover */
+.slider:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+.slider:hover::-moz-range-thumb {
+  background: #000000;
+}
+
+/* Vertical slider thumb on hover */
+.lineheight-slider-vertical:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+.lineheight-slider-vertical:hover::-moz-range-thumb {
+  background: #000000;
+}
+
+.tracking-slider:hover {
+  background: #000000;
+}
+
+.tracking-slider:hover::-webkit-slider-thumb {
+  background: #000000;
+}
+
 
 .font-button {
   display: inline-block;
