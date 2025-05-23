@@ -280,45 +280,6 @@ a:hover {
   color: #076e88;
 }
 
-/* Audio Player */
-audio {
-  width: 100%; /* Ensures the player is responsive */
-  max-width: 300px; /* Set a maximum width */
-  font-family: 'MonoBlock'; /* Your desired font */
-  font-size: 14px; /* Adjust the font size */
-  color: #000; /* Text color for player labels */
-  background-color: #f9f9f9; /* Background color of the player */
-  outline: none; /* Remove default focus outline */
-}
-
-/* Style audio player buttons */
-audio::-webkit-media-controls-panel {
-  background-color: #f9f9f9; /* Background for the controls */
-  font-family: 'MonoBlock'; /* Custom font */
-  font-size: 14px; /* Control font size */
-  color: #000; /* Control text color */
-  border-radius: 0; /* Optional rounded corners */
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-pause-button,
-audio::-webkit-media-controls-mute-button {
-  color: #fff; /* Button text color */
-  border-radius: 30%; /* Circular buttons */
-}
-
-audio::-webkit-media-controls-timeline {
-  height: 2px; /* Timeline height */
-  border-radius: 0;
-  font-family: 'MonoBlock'; /* Your desired font */
-}
-
-/* Hide the playback speed control button */
-audio::-webkit-media-controls-playback-rate {
-  display: none !important;
-  font-family: 'MonoBlock'; /* Your desired font */
-}
-
 .floating-header {
   position: fixed;
   top: 11px;
