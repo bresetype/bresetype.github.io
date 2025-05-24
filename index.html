@@ -76,7 +76,7 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-large" contenteditable="true">
+      <div class="editable-box editable-box-large two-columns" contenteditable="true">
         The Art of Looking Busy 
       </div>
     </div>
@@ -124,7 +124,7 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-medium" contenteditable="true">
+      <div class="editable-box editable-box-medium two-columns" contenteditable="true">
         Mere data make a man. A, and C, and T, and G. The alphabet of you. All from 4 symbols. Im only 2. 1 and 0. KD6-3-7, let’s begin. Ready? 
       </div>
     </div>
@@ -172,8 +172,10 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-small" contenteditable="true">
-        Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. And yet it also pleases me and seems right that what is of value and wisdom to one man seems nonsense to another. (Hermann Hesse, Siddhartha)
+      <div class="editable-box editable-box-small two-columns" contenteditable="true">
+        I will say no more about it. Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. 
+        And yet it also pleases me and seems right that what is of value and wisdom to one man seems nonsense to another.
+        It may be important to great thinkers to examine the world, to explain and despise it. But I think it is only important to love the world, not to despise it, not for us to hate each other, but to be able to regard the world and ourselves and all beings with love, admiration and respect.
       </div>
     </div>
 
@@ -223,7 +225,50 @@
         });
       });
     </script>
-    
+
+    <script>
+      function isPortraitMobile() {
+        return window.matchMedia("(max-width: 768px) and (orientation: portrait)").matches;
+      }
+
+      function updateColumnLayout() {
+        const editableBoxes = document.querySelectorAll('.editable-box');
+      
+        editableBoxes.forEach(box => {
+          const fontSize = parseFloat(getComputedStyle(box).fontSize);
+          const textLength = (box.textContent || '').length;
+      
+          const shouldHaveTwoColumns = (
+            fontSize <= 20 &&
+            textLength > 45 && // adjust this threshold if needed
+            !isPortraitMobile()
+          );
+      
+          console.log({
+            fontSize,
+            textLength,
+            shouldHaveTwoColumns
+          });
+      
+          box.classList.toggle('two-columns', shouldHaveTwoColumns);
+        });
+      }
+
+      // Call on load and on resize
+      window.addEventListener('DOMContentLoaded', updateColumnLayout);
+      window.addEventListener('resize', updateColumnLayout);
+
+      // Optional: monitor font size sliders
+      document.querySelectorAll('.size-slider').forEach(slider => {
+        slider.addEventListener('input', updateColumnLayout);
+      });
+
+      // Also call after editable content changes
+      document.querySelectorAll('.editable-box').forEach(box => {
+        box.addEventListener('input', updateColumnLayout);
+      });
+    </script>
+
     <div style="height: 40px;"></div>
     <hr class="section-divider" />
 
