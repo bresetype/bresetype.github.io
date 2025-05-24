@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typefaces</title>
+    <link rel="icon" href="/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Typefaces</h1>
+  </header>
+  <div class="floating-header">
+    <a href="index.html" class="site-name">Alex Blattmann</a>
+    <img src="assets/menu32x32.svg" class="hamburger-icon" onclick="toggleMenu()">
+    <div class="hamburger-menu" id="menu">
+      <a href="work2.html">Typefaces</a>
+      <a href="index.html">About</a>
+    </div>
+  </div>
+  <main>
+    <!-- Shared Font Buttons -->
+     
+    <div class="font-buttons-container">
+      <button class="font-button" data-font="Quince AI">Quince</button>
+      <button class="font-button" data-font="MonoBlock">MonoBlock</button>
+      <button class="font-button" data-font="Netrin">Netrin</button>
+      <button class="font-button" data-font="Flock">Flock</button>
+      <button class="font-button" data-font="BPMMono">BPM Mono</button>
+    </div>
+  
+    <!-- Editable Box 1 -->
+    <div style="height: 60px;"></div>
+    <div class="editable-container">
+      <div class="slider-container">
+        <input
+          type="range"
+          class="slider size-slider"
+          min="12"
+          max="144"
+          value="96"
+          step="1"
+        >
+      </div>
+      <div class="editable-box" contenteditable="true">
+        The Master of Looking Busy
+      </div>
+    </div>
+  
+    <!-- Editable Box 2 -->
+    <div style="height: 60px;"></div>
+    <div class="editable-container">
+      <div class="slider-container">
+        <input
+          type="range"
+          class="slider size-slider"
+          min="12"
+          max="144"
+          value="96"
+          step="1"
+        >
+      </div>
+      <div class="editable-box" contenteditable="true">
+        Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. KD6-3-7, let’s begin. Ready? The alphabet of you. All from 4 symbols. I am only 2: 1 and 0.
+      </div>
+    </div>
+  
+    <script>
+      // Apply individual font size control
+      document.querySelectorAll('.editable-container').forEach(container => {
+        const slider = container.querySelector('.size-slider');
+        const box = container.querySelector('.editable-box');
+        slider.addEventListener('input', (e) => {
+          box.style.fontSize = `${e.target.value}px`;
+        });
+      });
+  
+      // Apply shared font family control to all boxes
+      const fontButtons = document.querySelectorAll('.font-button');
+      const allEditableBoxes = document.querySelectorAll('.editable-box');
+  
+      fontButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          const font = e.target.getAttribute('data-font');
+          allEditableBoxes.forEach(box => {
+            box.style.fontFamily = `${font}, Arial, sans-serif`;
+          });
+        });
+      });
+    </script>
+    <div style="height: 40px;"></div>
+    <hr class="section-divider" />
+    <p class="onum" style="color:#8c8c8c;font-size:16px;">
+      These type concepts are works-in-progress, single-weight designs and are not currently available.
+    </p>
+  
+  </main>
+  <footer>
+    <div style="height: 40px;"></div>
+      <p style="color:#000000;font-size:16px;"class="onum">This site uses 
+          <strong>MonoBlock</strong> 
+          and Quince <br>
+          © 2025
+          Alex Blattmann</p>
+      <br>
+  <!-- Simple Audio Player -->
+      <div class="audio-player">
+          <audio controls>
+              <source src="audio/Fafa v1.wav" type="audio/wav">
+              Your browser does not support the audio element.
+          </audio>
+      </div>
+      <p> <a href="https://open.spotify.com/artist/0pO1dfqnLstOOmUuxdo503?si=WI-k_jlcTluNUdCT5FDVqg" target="_blank" style="color:#000000;font-family:'MonoBlock';font-size:16px;vertical-align:top;"class="onum"> Sound by Brese</a> </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
