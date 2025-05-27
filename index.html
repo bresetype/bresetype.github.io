@@ -14,10 +14,22 @@
 
   <div class="floating-header" id="floatingHeader">
     <a href="index.html" class="site-name">Alex Blattmann</a>
-    <img src="assets/menu32x32.svg" class="hamburger-icon" onclick="toggleMenu()" />
-    <div class="hamburger-menu" id="menu">
-      <a href="index.html">Typefaces</a>
-      <a href="about.html">About</a>
+  
+    <div class="header-icons">
+      <img src="assets/DarkMode_Icon_Off.svg" id="darkModeToggle"
+           style="width: 24px; height: 24px; cursor: pointer;" />
+    
+      <!-- New wrapper for icon + dropdown -->
+      <div class="menu-container">
+        <img src="assets/menu32x32_DarkMode_Off.svg"
+             class="hamburger-icon"
+             id="menuToggle"
+             onclick="toggleMenu()" />
+        <div class="hamburger-menu" id="menu">
+          <a href="index.html">Typefaces</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
     </div>
   </div>
 
