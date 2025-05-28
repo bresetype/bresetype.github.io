@@ -85,7 +85,7 @@
   <div style="height: 40px;"></div>
 
   <footer>
-    <p style="color:#000000; font-size:12px;" class="onum">
+    <p class="onum" style="font-size:12px;">
       This site uses <strong>MonoBlock</strong> and Quince <br>
       © 2025
     </p>
@@ -111,5 +111,27 @@
       lastScrollY = window.scrollY;
     });
   </script>  
+  <script>
+    const darkToggle = document.getElementById('darkModeToggle');
+    const menuIcon = document.getElementById('menuToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+  
+    function applyTheme(theme) {
+      const isDark = theme === 'dark';
+      document.body.classList.toggle('dark-mode', isDark);
+      darkToggle.src = isDark ? 'assets/DarkMode_Icon_On.svg' : 'assets/DarkMode_Icon_Off.svg';
+      menuIcon.src = isDark ? 'assets/menu32x32_DarkMode_On.svg' : 'assets/menu32x32_DarkMode_Off.svg';
+    }
+  
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    applyTheme(initialTheme);
+  
+    darkToggle.addEventListener('click', () => {
+      const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
 </body>
 </html>

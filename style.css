@@ -443,7 +443,7 @@ a:hover {
 .header-icons {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   position: relative; /* enables proper dropdown anchoring */
   vertical-align: middle;
 }
@@ -486,4 +486,124 @@ a:hover {
 /* Toggle menu display with class */
 .hamburger-menu.show {
   display: flex;
+}
+
+
+/* === DARK MODE STYLES === */
+body.dark-mode {
+  background-color: #060606;
+  color: #ffffff;
+}
+
+/* Links on about page and others */
+body.dark-mode a {
+  color: inherit;
+}
+body.dark-mode a:hover {
+  color: #053F4D;
+}
+
+body.dark-mode .site-name {
+  background-color: #060606;
+}
+
+body.dark-mode .typeface-links h2,
+body.dark-mode main h2 {
+  color: #ffffff;
+}
+
+/* Typeface buttons and font buttons */
+body.dark-mode .typefaces-button,
+body.dark-mode .font-button {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+body.dark-mode .typefaces-button:hover,
+body.dark-mode .font-button:hover {
+  color: #053F4D;
+}
+
+body.dark-mode .section-divider {
+  border-top: 1px solid #ffffff;
+}
+
+/* Floating header */
+body.dark-mode .floating-header {
+  background-color: #060606;
+  color: #ffffff;
+}
+
+body.dark-mode footer p,
+body.dark-mode .onum {
+  color: #ffffff;
+}
+
+/* Hamburger dropdown */
+body.dark-mode .hamburger-menu {
+  background-color: #060606;
+}
+body.dark-mode .hamburger-menu a {
+  color: #ffffff;
+}
+body.dark-mode .hamburger-menu a:hover {
+  color: #053F4D;
+}
+
+/* Sliders and thumbs */
+body.dark-mode .slider,
+body.dark-mode .lineheight-slider-vertical,
+body.dark-mode .tracking-slider {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+body.dark-mode .slider-controls label {
+  color: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider-controls label:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .slider:hover,
+body.dark-mode .lineheight-slider-vertical:hover,
+body.dark-mode .tracking-slider:hover {
+  background: #ffffff;
+}
+body.dark-mode .slider:hover::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+body.dark-mode .tracking-slider:hover::-webkit-slider-thumb,
+body.dark-mode .slider:hover::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+  background: #ffffff;
+}
+
+
+body.dark-mode .slider::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical::-webkit-slider-thumb,
+body.dark-mode .tracking-slider::-webkit-slider-thumb {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider:hover::-webkit-slider-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-webkit-slider-thumb,
+body.dark-mode .tracking-slider:hover::-webkit-slider-thumb {
+  background: #ffffff;
+}
+
+body.dark-mode .slider::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical::-moz-range-thumb,
+body.dark-mode .tracking-slider::-moz-range-thumb {
+  background: #3f3f3f;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .slider:hover::-moz-range-thumb,
+body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
+body.dark-mode .tracking-slider:hover::-moz-range-thumb {
+  background: #ffffff;
 }
