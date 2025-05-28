@@ -607,3 +607,12 @@ body.dark-mode .lineheight-slider-vertical:hover::-moz-range-thumb,
 body.dark-mode .tracking-slider:hover::-moz-range-thumb {
   background: #ffffff;
 }
+
+/* Firefox track */
+body.dark-mode .slider::-moz-range-track {
+  background: #3f3f3f;
+}
+
+body.dark-mode .slider:hover::-moz-range-track {
+  background: #ffffff;
+}
