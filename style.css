@@ -245,7 +245,7 @@ a:hover {
 .slider-controls {
   display: flex;
   align-items: center;      /* Vertically center them */
-  gap: 2rem;              /* Optional: space between sliders */
+  gap: 1.5rem;              /* Optional: space between sliders */
   flex-wrap: nowrap;        /* Prevent wrapping on small screens */
 }
 
@@ -302,7 +302,7 @@ a:hover {
 @media (max-width: 600px) {
   .slider-container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
@@ -500,7 +500,7 @@ body.dark-mode a {
   color: inherit;
 }
 body.dark-mode a:hover {
-  color: #053F4D;
+  color: #089EC4;
 }
 
 body.dark-mode .site-name {
@@ -522,7 +522,7 @@ body.dark-mode .font-button {
 
 body.dark-mode .typefaces-button:hover,
 body.dark-mode .font-button:hover {
-  color: #053F4D;
+  color: #089EC4;
 }
 
 body.dark-mode .section-divider {
@@ -548,7 +548,7 @@ body.dark-mode .hamburger-menu a {
   color: #ffffff;
 }
 body.dark-mode .hamburger-menu a:hover {
-  color: #053F4D;
+  color: #089EC4;
 }
 
 /* Sliders and thumbs */
@@ -615,4 +615,14 @@ body.dark-mode .slider::-moz-range-track {
 
 body.dark-mode .slider:hover::-moz-range-track {
   background: #ffffff;
+}
+
+.reset-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+body.dark-mode .reset-icon {
+  content: url("assets/TextReset_Icon_On.svg");
 }

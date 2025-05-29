@@ -50,6 +50,10 @@
 
     <div class="editable-container">
       <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <div style="margin-right: 0.15rem;">
+          <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
+        </div>
+         
         <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
           Font Size
           <input
@@ -98,6 +102,10 @@
 
     <div class="editable-container">
       <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <div style="margin-right: 0.15rem;">
+          <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
+        </div>
+
         <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
           Font Size
           <input
@@ -146,6 +154,10 @@
 
     <div class="editable-container">
       <div class="slider-controls" style="display: flex; flex-direction: row; gap: 32px;">
+        <div style="margin-right: 0.15rem;">
+          <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
+        </div>
+
         <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
           Font Size
           <input
@@ -192,49 +204,53 @@
     </div>
 
     <script>
-      // Apply individual font size and line-height control
       document.querySelectorAll('.editable-container').forEach(container => {
         const sizeSlider = container.querySelector('.size-slider');
         const trackingSlider = container.querySelector('.tracking-slider');
         const lineHeightSlider = container.querySelector('.lineheight-slider-vertical');
         const box = container.querySelector('.editable-box');
+        const resetIcon = container.querySelector('.reset-icon');
+      
+        const defaultText = box.innerHTML.trim();
+        const defaultSize = sizeSlider?.value;
+        const defaultTracking = trackingSlider?.value;
+        const defaultLineHeight = lineHeightSlider?.value;
+      
+        function applyStyles() {
+          if (sizeSlider) box.style.fontSize = `${sizeSlider.value}px`;
+          if (trackingSlider) box.style.letterSpacing = `${trackingSlider.value}em`;
+          if (lineHeightSlider) box.style.lineHeight = lineHeightSlider.value;
+        }
+      
+        applyStyles();
       
         if (sizeSlider) {
-          sizeSlider.addEventListener('input', (e) => {
-            box.style.fontSize = `${e.target.value}px`;
+          sizeSlider.addEventListener('input', () => {
+            box.style.fontSize = `${sizeSlider.value}px`;
           });
-          // Set initial font size
-          box.style.fontSize = `${sizeSlider.value}px`;
         }
-    
+      
         if (trackingSlider) {
-          trackingSlider.addEventListener('input', (e) => {
-            box.style.letterSpacing = `${e.target.value}em`;
+          trackingSlider.addEventListener('input', () => {
+            box.style.letterSpacing = `${trackingSlider.value}em`;
           });
-          // Set initial letter spacing
-          box.style.letterSpacing = `${trackingSlider.value}em`;
         }
-    
+      
         if (lineHeightSlider) {
-          lineHeightSlider.addEventListener('input', (e) => {
-            box.style.lineHeight = e.target.value;
+          lineHeightSlider.addEventListener('input', () => {
+            box.style.lineHeight = lineHeightSlider.value;
           });
-          // Set initial line height
-          box.style.lineHeight = lineHeightSlider.value;
         }
-      });
       
-      // Font buttons apply font family to all editable boxes
-      const fontButtons = document.querySelectorAll('.font-button');
-      const allEditableBoxes = document.querySelectorAll('.editable-box');
-      
-      fontButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-          const font = e.target.getAttribute('data-font');
-          allEditableBoxes.forEach(box => {
-            box.style.fontFamily = `${font}, Arial, sans-serif`;
+        if (resetIcon) {
+          resetIcon.addEventListener('click', () => {
+            if (sizeSlider) sizeSlider.value = defaultSize;
+            if (trackingSlider) trackingSlider.value = defaultTracking;
+            if (lineHeightSlider) lineHeightSlider.value = defaultLineHeight;
+            box.innerHTML = defaultText;
+            applyStyles();
           });
-        });
+        }
       });
     </script>
 
