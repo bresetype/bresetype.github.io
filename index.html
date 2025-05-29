@@ -355,5 +355,15 @@
       localStorage.setItem('theme', newTheme);
     });
   </script>
+  <script>
+    document.querySelectorAll('.font-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const font = button.getAttribute('data-font');
+        document.querySelectorAll('.editable-box').forEach(box => {
+          box.style.fontFamily = `'${font}', sans-serif`;
+        });
+      });
+    });
+</script>  
 </body>
 </html>
