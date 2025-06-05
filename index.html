@@ -17,7 +17,7 @@
 
     <div class="header-icons">
       <img src="assets/DarkMode_Icon_Off.svg" id="darkModeToggle"
-           style="width: 24px; height: 24px; cursor: pointer;" />
+           style="width: 20px; height: 20px; cursor: pointer;" />
 
       <!-- New wrapper for icon + dropdown -->
       <div class="menu-container">
@@ -38,11 +38,16 @@
     <div style="height: 40px;"></div>
 
     <div class="font-buttons-container">
-      <button class="font-button" data-font="Quince AI">Quince</button>
-      <button class="font-button" data-font="MonoBlock">MonoBlock</button>
-      <button class="font-button" data-font="Netrin">Netrin</button>
-      <button class="font-button" data-font="Flock">Flock</button>
-      <button class="font-button" data-font="BPMMono">BPM Mono</button>
+      <button class="font-button" data-font="Ciunas" data-tooltip="Ciunas" style="font-family: 'Ciunas';">
+        <span style="display: inline-block; transform: translateY(-2px);">Ciunas</span>
+      </button>
+      <button class="font-button" data-font="Quince AI" data-tooltip="Quince" style="font-family: 'Quince AI';">
+        <span style="display: inline-block; transform: translateY(-2px);">Quince</span>
+      </button>
+      <button class="font-button" data-font="MonoBlock" data-tooltip="MonoBlock" style="font-family: 'MonoBlock';">MonoBlock</button>
+      <button class="font-button" data-font="Netrin" data-tooltip="Netrin" style="font-family: 'Netrin';">Netrin</button>
+      <button class="font-button" data-font="Flock" data-tooltip="Flock" style="font-family: 'Flock';">Flock</button>
+      <button class="font-button" data-font="BPMMono" data-tooltip="BPMMono" style="font-family: 'BPMMono';">BPMMono</button>
     </div>
 
     <!-- Editable Box 1 -->
@@ -54,8 +59,8 @@
           <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
         </div>
          
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
-          Font Size
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
+          Size
           <input
             type="range"
             class="slider size-slider"
@@ -66,7 +71,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Tracking
           <input
             type="range"
@@ -79,7 +84,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Leading
           <input
             type="range"
@@ -92,7 +97,7 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-large two-columns" contenteditable="true">
+      <div class="editable-box editable-box-large two-columns" contenteditable="true" data-tooltip="Click and type something...">
         The Art of Looking Busy 
       </div>
     </div>
@@ -106,8 +111,8 @@
           <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
         </div>
 
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
-          Font Size
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
+          Size
           <input
             type="range"
             class="slider size-slider"
@@ -118,7 +123,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Tracking
           <input
             type="range"
@@ -131,7 +136,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Leading
           <input
             type="range"
@@ -144,7 +149,7 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-medium two-columns" contenteditable="true">
+      <div class="editable-box editable-box-medium two-columns" contenteditable="true" data-tooltip="Click and type something...">
         Mere data make a man. A, and C, and T, and G. The alphabet of you. All from 4 symbols. Im only 2. 1 and 0. KD6-3-7, let’s begin. Ready? 
       </div>
     </div>
@@ -158,8 +163,8 @@
           <img class="reset-icon" src="assets/TextReset_Icon_Off.svg" alt="Reset" />
         </div>
 
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
-          Font Size
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
+          Size
           <input
             type="range"
             class="slider size-slider"
@@ -170,7 +175,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Tracking
           <input
             type="range"
@@ -183,7 +188,7 @@
           />
         </label>
     
-        <label style="display: flex; align-items: center; font-family: 'MonoBlock', monospace; font-size: 12px; gap: 6px;">
+        <label style="display: flex; align-items: center; font-family: 'Ciunas', sans-serif; font-size: 12px; gap: 6px;">
           Leading
           <input
             type="range"
@@ -196,7 +201,7 @@
         </label>
       </div>
       <div style="height: 10px;"></div>
-      <div class="editable-box editable-box-small two-columns" contenteditable="true">
+      <div class="editable-box editable-box-small two-columns" contenteditable="true" data-tooltip="Click and type something...">
         I will say no more about it. Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish. 
         And yet it also pleases me and seems right that what is of value and wisdom to one man seems nonsense to another.
         It may be important to great thinkers to examine the world, to explain and despise it. But I think it is only important to love the world, not to despise it, not for us to hate each other, but to be able to regard the world and ourselves and all beings with love, admiration and respect.
@@ -255,6 +260,17 @@
     </script>
 
     <script>
+      document.querySelectorAll('.editable-box[data-tooltip]').forEach(el => {
+        el.addEventListener('click', () => {
+          if (!el.dataset.tooltipShown) {
+            el.classList.add('hide-tooltip');
+            el.dataset.tooltipShown = 'true';
+          }
+        });
+      });
+    </script>
+
+    <script>
       function isPortraitMobile() {
         return window.matchMedia("(max-width: 768px) and (orientation: portrait)").matches;
       }
@@ -300,15 +316,15 @@
     <div style="height: 40px;"></div>
     <hr class="section-divider" />
 
-    <p class="onum" style="color:#8c8c8c; font-size:16px;">
+    <p class="onum" style="color:#8c8c8c; font-size:14px;">
       These type concepts are works-in-progress, single-weight designs and are not currently available.
     </p>
   </main>
 
   <footer>
-    <div style="height: 40px;"></div>
-    <p class="onum" style="font-size:12px;">
-      This site uses <strong>MonoBlock</strong> and Quince <br />
+    <div style="height: 20px;"></div>
+    <p class="onum" style="color:#8c8c8c; font-size:12px;">
+      This site uses Ciunas<br>
       © 2025
     </p>
   </footer>
