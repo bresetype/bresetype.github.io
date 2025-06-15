@@ -227,7 +227,7 @@ a:hover {
   margin-top: 4px;
   font-size: 14px;
   color: #c0c0c0;
-  font-family: 'Ciunas';
+  font-family: 'Ciunas', sans-serif;
   pointer-events: none;
 }
 
@@ -333,7 +333,7 @@ a:hover {
 .slider-controls label {
   display: flex;
   align-items: center;
-  font-family: 'Ciunas';
+  font-family: 'Ciunas', sans-serif;
   font-size: 14px;
   gap: 6px;
   color: #c0c0c0;
@@ -491,7 +491,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  font-family: 'Ciunas', monospace;
+  font-family: 'Ciunas', sans-serif;
 }
 
 /* Hidden state */
@@ -528,7 +528,7 @@ a:hover {
   padding: 8px 12px;
   font-size: 16px;
   flex-direction: column;
-  font-family: 'Ciunas';
+  font-family: 'Ciunas', sans-serif;
   z-index: 999;
 }
 
